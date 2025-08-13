@@ -1,0 +1,10 @@
+# hugo
+public/
+resources/
+.hugo_build.lock
+
+# node / npm
+node_modules/
+
+# macos
+.DS_Store
