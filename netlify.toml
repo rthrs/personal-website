@@ -1,0 +1,14 @@
+# This is the main build configuration
+[build]
+  # This is the command Netlify will run to build your site
+  command = "hugo"
+  # This is the directory that contains the final website files
+  publish = "public"
+
+# This section tells Netlify's build environment what to do
+[context.production.environment]
+  # THIS IS THE CRUCIAL LINE:
+  # It tells Netlify which version of Hugo to download and use.
+  # Replace "0.121.2" with the version you found in Step 1.
+  HUGO_VERSION = "0.148.2"
+  
