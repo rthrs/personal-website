@@ -1,0 +1,5 @@
+{{- with .Page.Resources.Get (.Get "path") }}
+  {{- with .Process (printf "resize %dx wepb" ($.Get "width")) -}}
+    <img style="margin: auto" src="{{ .RelPermalink }}" width="{{ .Width }}" alt="{{ $.Get "alt" }}">
+  {{- end }}
+{{- end -}}
