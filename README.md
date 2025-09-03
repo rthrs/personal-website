@@ -6,13 +6,12 @@
 The source code for my personal website, available at [arturmyszkowski.pl](https://arturmyszkowski.pl).
 
 This project was created to serve as a digital business card, and in the future a place to showcase my most interesting projects, and a platform for writing technical articles.
-<!-- It is built with Hugo for maximum performance and hosted on AWS to practice and demonstrate my skills with cloud infrastructure. -->
 
 <!-- ![Project Screenshot](https://link-to-your-screenshot.png) -->
 
 ## ✨ Features
 
-*   **Minimalist & Modern Design:** A clean, fast, and content-focused layout using the PaperMod theme.
+*   **Minimalist & Modern Design:** A clean, fast, and content-focused layout using Hugo and the PaperMod theme.
 *   **Profile-Centric Homepage:** A simple landing page with a circular profile photo, a short bio, and links to my social profiles.
 *   **Bilingual Content:** Fully supports English and Polish content with a language switcher.
 *   **Future-Ready:** Includes layouts for detailed project pages and a complete blog section.
@@ -25,10 +24,10 @@ This project is built with a stack chosen for speed, simplicity, and the learnin
 
 *   **Static Site Generator:** [Hugo](https://gohugo.io/)
 *   **Theme:** [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod)
-<!-- *   **Hosting:**
-    *   **Storage:** [AWS S3](https://aws.amazon.com/s3/)
-    *   **CDN & SSL:** [AWS CloudFront](https://aws.amazon.com/cloudfront/)
-    *   **DNS:** [AWS Route 53](https://aws.amazon.com/route53/) -->
+*   **Hosting & Deployment:**
+    *   **Platform:** [Netlify](https://www.netlify.com/)
+    *   **DNS & CDN:** Managed globally via Netlify's Edge Network.
+    *   **CI/CD:** Automated builds and deployments triggered by `git push` to the `main` branch.
 *   **Development Environment:** Visual Studio Code, iTerm2 with Zsh, [Starship Prompt](https://starship.rs/), and [Nerd Fonts](https://www.nerdfonts.com/).
 
 ## 🛠️ Getting Started: Local Development
@@ -67,3 +66,16 @@ Start the Hugo development server to see a live preview of the site. The `-D` fl
 
 ```sh
 hugo server -D
+```
+
+## 💄 Favicon
+
+The favicon set for this website was generated using the excellent tool [RealFaviconGenerator.net](https://realfavicongenerator.net/). This service was used to create a comprehensive set of icons, ensuring correct and high-quality display on all major browsers and platforms, including:
+
+*   Standard browser tabs (`favicon.ico`, PNG versions)
+*   Apple touch icons for iOS (`apple-touch-icon.png`)
+*   Android Chrome home screen icons
+*   Pinned tab icons for Safari (SVG)
+*   Windows Metro tiles
+
+The generated files are located in the `static/` directory, and the necessary HTML link tags have been added to the site's `<head>` via a custom `layouts/partials/extended_head.html` partial, which is a standard Hugo and PaperMod theme practice for this type of customization.
