@@ -3,3 +3,21 @@ baseURL = "https://arturmyszkowski.pl"
 languageCode = "en-us"
 title = "Artur Myszkowski"
 theme = "PaperMod"
+ignoreLogs = ['warning-goldmark-raw-html']
+[params]
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/rthrs"
+
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://www.instagram.com/artur6strings/"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = ""
+
+  [[params.socialIcons]]
+    name = "cv"
+    title = "Resume"
+    url = "/files/Artur_Myszkowski_Resume_2025_v4.pdf"

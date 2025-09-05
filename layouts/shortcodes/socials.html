@@ -1,0 +1,30 @@
+{{- $email := .Get 0 -}}
+{{- $parts := split $email "@" -}}
+{{- $user := index $parts 0 -}}
+{{- $domain := index $parts 1 -}}
+
+<div class="social-icons">
+    {{- range site.Params.socialIcons }}
+        <a href="{{ trim .url ' ' | safeURL }}" style="box-shadow:none" target="_blank" rel="noopener noreferrer me" title="{{ (.title | default .name) | title }}">
+            {{ partial "svg.html" . }}
+    
+            <div class="social-icon-caption">
+                {{ (.title | default .name) | title }}
+            </div>
+        </a>
+    {{- end }}
+</div>
+
+<script>
+  (function() {
+    const user = '{{ $user }}';
+    const domain = '{{ $domain }}';
+    const container = document.querySelector('a[title="Email"]')
+
+    if (container) {
+        const email = user + '@' + domain;
+        container.href = `mailto:${email}`;
+    }
+  })();
+</script>
+

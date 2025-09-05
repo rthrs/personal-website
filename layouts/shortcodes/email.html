@@ -1,0 +1,25 @@
+{{- $email := .Get 0 -}}
+{{- $parts := split $email "@" -}}
+{{- $user := index $parts 0 -}}
+{{- $domain := index $parts 1 -}}
+{{- $uniqueID := now.Unix -}}
+
+<span id="email-link-{{ $uniqueID }}"></span>
+
+<script>
+  (function() {
+    const user = '{{ $user }}';
+    const domain = '{{ $domain }}';
+    const container = document.getElementById('email-link-{{ $uniqueID }}');
+    
+    if (container) {
+      const email = user + '@' + domain;
+      container.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    }
+  })();
+</script>
+
+<noscript>
+  <!-- Fallback for users with JavaScript disabled -->
+  <span>{{ $user }} [at] {{ $domain }}</span>
+</noscript>
