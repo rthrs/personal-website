@@ -1,3 +1,7 @@
 img[alt="Artur Myszkowski"] {
     margin: auto;
 }
+
+p {
+    text-align: justify;
+}
