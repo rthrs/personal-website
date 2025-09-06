@@ -1,10 +1,15 @@
 
 baseURL = "https://arturmyszkowski.pl"
 languageCode = "en-us"
-title = "Artur Myszkowski"
+title = "Artur Myszkowski | Senior Software Developer"
 theme = "PaperMod"
 ignoreLogs = ['warning-goldmark-raw-html']
 [params]
+  # Override the header text (otherwise the "title" would be used)
+  [params.label]
+    display = true
+    text = "Artur Myszkowski"
+
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/rthrs"
