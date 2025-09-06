@@ -3,7 +3,7 @@ title: "Artur Myszkowski | Senior Software Developer"
 description: "Digital business card and blog of Artur Myszkowski, a Senior Software Developer specializing in React and modern web technologies. Explore my projects and articles."
 ---
 
-{{< image src=me.png width=412 height=412 alt="Artur Myszkowski" >}}
+{{< image src="me.png" class="hero-img" alt="Artur Myszkowski" >}}
 
 {{< socials "contact@arturmyszkowski.pl" >}}
 
