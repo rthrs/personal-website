@@ -4,6 +4,8 @@ languageCode = "en-us"
 title = "Artur Myszkowski | Senior Software Developer"
 theme = "PaperMod"
 ignoreLogs = ['warning-goldmark-raw-html']
+[markup.goldmark.renderer]
+  unsafe= true
 [params]
   # Override the header text (otherwise the "title" would be used)
   [params.label]

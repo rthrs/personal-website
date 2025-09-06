@@ -2,24 +2,25 @@
 {{- $parts := split $email "@" -}}
 {{- $user := index $parts 0 -}}
 {{- $domain := index $parts 1 -}}
-{{- $uniqueID := now.Unix -}}
+{{- $uid := now.Unix -}}
 
-<span id="email-link-{{ $uniqueID }}"></span>
+<span id="email-link-{{ $uid }}">{{ $user }} [at] {{ $domain }}</span>
 
+{{- $script := (printf `
 <script>
   (function() {
-    const user = '{{ $user }}';
-    const domain = '{{ $domain }}';
-    const container = document.getElementById('email-link-{{ $uniqueID }}');
+    const user = '%s';
+    const domain = '%s';
+    const container = document.getElementById('email-link-%d');
     
     if (container) {
       const email = user + '@' + domain;
-      container.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+      container.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
     }
   })();
 </script>
+` $user $domain $uid) -}}
 
-<noscript>
-  <!-- Fallback for users with JavaScript disabled -->
-  <span>{{ $user }} [at] {{ $domain }}</span>
-</noscript>
+{{- $footerScripts := .Page.Scratch.Get "footer_scripts" | default slice -}}
+{{- $footerScripts = $footerScripts | append $script -}}
+{{- .Page.Scratch.Set "footer_scripts" $footerScripts -}}
