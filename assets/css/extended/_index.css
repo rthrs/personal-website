@@ -1,29 +1,38 @@
 :root {
-  --accent-gradient: linear-gradient(to top right, #06D6FF 0%, #00FF80 50%, #5d8c00 100%);
+    --accent-light: linear-gradient(to top right, #d000c9 0%, #0095c5 50%, #c8b700 100%);
+    --accent-dark: linear-gradient(to top right, #fd95df 0%, #67e6ff 50%, #f6fd6e 100%);
 }
 
 p {
     text-align: justify;
 }
 
-.txt-gradient {
-    background: var(--accent-gradient);
+.accent-txt {
+    background: var(--accent-light);
     background-clip: text;
  
     color: transparent;
- 
-    filter: hue-rotate(330deg) invert(1);
 }
 
-.dark .txt-gradient{
-    filter: hue-rotate(40deg);
+.accent-bg {
+    background: var(--border);
+    padding: 0.15rem 0.25rem;
 }
 
-.txt-gradient a {
+.dark .accent-txt {
+    background: var(--accent-dark);
+    background-clip: text;
+}
+
+.accent-txt a {
     color: transparent;
 
     border-bottom: solid 1px;
-    border-image: var(--accent-gradient) 1 stretch;
+    border-image: var(--accent-light) 1 stretch;
+}
+
+.dark .accent-txt a {
+    border-image: var(--accent-dark) 1 stretch;
 }
 
 .hero-img {
@@ -32,8 +41,8 @@ p {
     width: 100%;
     height: 100%;
 
-    max-width: 412px;
-    max-height: 412px;
+    max-width: 360px;
+    max-height: 360px;
 
     border: 1px solid var(--primary);
     border-radius: 50% !important;
