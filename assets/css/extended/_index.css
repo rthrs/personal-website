@@ -3,35 +3,34 @@
     --accent-dark: linear-gradient(to top right, #fd95df 0%, #67e6ff 50%, #f6fd6e 100%);
 }
 
-p {
+.list {
+    background: var(--border);
+}
+
+.post-content {
     text-align: justify;
 }
 
-.accent-txt {
+.accent {
     background: var(--accent-light);
     background-clip: text;
  
     color: transparent;
 }
 
-.accent-bg {
-    background: var(--border);
-    padding: 0.15rem 0.25rem;
-}
-
-.dark .accent-txt {
+.dark .accent {
     background: var(--accent-dark);
     background-clip: text;
 }
 
-.accent-txt a {
+.accent a {
     color: transparent;
 
     border-bottom: solid 1px;
     border-image: var(--accent-light) 1 stretch;
 }
 
-.dark .accent-txt a {
+.dark .accent a {
     border-image: var(--accent-dark) 1 stretch;
 }
 
