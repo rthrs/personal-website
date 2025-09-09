@@ -1,6 +1,16 @@
 :root {
-    --accent-light: linear-gradient(to top right, #d000c9 0%, #0095c5 50%, #c8b700 100%);
-    --accent-dark: linear-gradient(to top right, #fd95df 0%, #67e6ff 50%, #f6fd6e 100%);
+    --accent-light: linear-gradient(
+        to top right,
+        #d000c9 0%,
+        #0095c5 50%,
+        #c8b700 100%
+    );
+    --accent-dark: linear-gradient(
+        to top right,
+        #fd95df 0%,
+        #67e6ff 50%,
+        #f6fd6e 100%
+    );
 }
 
 .list {
@@ -14,7 +24,7 @@
 .accent {
     background: var(--accent-light);
     background-clip: text;
- 
+
     color: transparent;
 }
 

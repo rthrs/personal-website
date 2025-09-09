@@ -1,5 +1,10 @@
 {{- with .Page.Resources.Get (.Get "src") }}
-  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
-    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="{{ $.Get "class" }}" alt="{{ $.Get "alt" }}">
-  {{ end }}
+    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+        <img
+            src="{{ .RelPermalink }}"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
+            class="{{ $.Get "class" }}"
+            alt="{{ $.Get "alt" }}" />
+    {{ end }}
 {{ end }}
