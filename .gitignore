@@ -8,3 +8,6 @@ node_modules/
 
 # macos
 .DS_Store
+
+# Local Netlify folder
+.netlify
