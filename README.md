@@ -1,6 +1,7 @@
 # Personal Website of Artur Myszkowski
 
 [![Website-Status](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Farturmyszkowski.pl)](https://arturmyszkowski.pl)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/87c81a46-6519-4017-9210-fa0ae4c4b0ef/deploy-status)](https://app.netlify.com/projects/scintillating-tiramisu-37b9e8/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The source code for my personal website, available at [arturmyszkowski.pl](https://arturmyszkowski.pl).
