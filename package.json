@@ -1,17 +1,20 @@
 {
-  "name": "personal-website",
-  "version": "1.0.0",
-  "description": "Personal Website of Artur Myszkowski",
-  "scripts": {
-    "dev": "hugo server --bind=0.0.0.0",
-    "build": "rm -rf public && netlify build",
-    "preview": "serve public",
-    "netlify": "netlify"
-  },
-  "author": "Artur Myszkowski",
-  "license": "MIT",
-  "devDependencies": {
-    "netlify-cli": "^23.5.1",
-    "serve": "^14.2.5"
-  }
+    "name": "personal-website",
+    "version": "1.0.0",
+    "description": "Personal Website of Artur Myszkowski",
+    "scripts": {
+        "dev": "hugo server --bind=0.0.0.0",
+        "build": "rm -rf public && netlify build",
+        "preview": "serve public",
+        "netlify": "netlify",
+        "format": "prettier --write ."
+    },
+    "author": "Artur Myszkowski",
+    "license": "MIT",
+    "devDependencies": {
+        "netlify-cli": "^23.5.1",
+        "prettier": "^3.6.2",
+        "prettier-plugin-go-template": "^0.0.15",
+        "serve": "^14.2.5"
+    }
 }

@@ -1,0 +1,17 @@
+# Ignore the build output directory
+/public/
+
+# Ignore the theme's submodule directory
+/themes/
+
+# Ignore Hugo's generated resources cache
+/resources/
+
+# Ignore Node.js dependencies
+/node_modules/
+
+# Ignore Netlify's config file (it's TOML, but good to be explicit)
+netlify.toml
+
+# Ignore any lock files
+package-lock.json
