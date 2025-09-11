@@ -1,26 +1,13 @@
 :root {
-    --accent: #37428c;
-    --hero-img-border-width: 2px;
-    --hero-img-border-color: #080a0b;
+    --hero-img-border-width: 3px;
     --hero-img-max-size: 360px;
-    --hero-img-margin: 12px;
-    --hero-img-gradient: linear-gradient(
-        to top right,
-        #d000c9 0%,
-        #0095c5 50%,
-        #c8b700 100%
-    );
-    --hero-img-gradient-invert: linear-gradient(
+    --hero-img-border-color: #fafafa;
+    --hero-img-bg: linear-gradient(
         to top right,
         #2fff36 0%,
-        #ff6a3a 50%,
-        #3748ff 100%
+        #ff6a3a 45%,
+        #3748ff 85%
     );
-}
-
-:root .dark {
-    --accent: #fff77f;
-    --hero-img-border-color: #fafafa;
 }
 
 html {
@@ -42,84 +29,31 @@ html {
 
 .accent a {
     box-shadow: none;
-    border-bottom: solid 1px transparent;
 }
 
 .accent a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
+    filter: brightness(3);
+    box-shadow: 0 1px;
 }
 
-.hero-img-wrapper-outer {
-    position: relative;
-    display: flex;
-
+.hero-img-container {
     margin: auto;
 
     border-radius: 50%;
 
-    background: var(--hero-img-gradient);
+    background: var(--hero-img-bg);
 
-    width: var(--hero-img-max-size);
-    height: var(--hero-img-max-size);
+    max-width: var(--hero-img-max-size);
+    max-height: var(--hero-img-max-size);
 
-    transition: transform 0.3s ease;
-}
-
-.hero-img-wrapper-inner {
-    display: flex;
-
-    flex: 1;
-
-    margin: var(--hero-img-margin);
-
-    border-radius: var(--hero-img-margin);
-
-    overflow: hidden;
-}
-
-.hero-img-wrapper-inner:before {
-    content: '';
-
-    flex: 1;
-
-    background: var(--hero-img-gradient-invert);
-
-    border-radius: 50%;
-
-    margin: calc(-1 * var(--hero-img-margin));
-}
-
-.hero-img-wrapper-inner:after {
-    content: '';
-
-    position: absolute;
-
-    top: var(--hero-img-margin);
-    left: var(--hero-img-margin);
-    bottom: var(--hero-img-margin);
-    right: var(--hero-img-margin);
-
-    border-radius: var(--hero-img-margin);
-    border: solid var(--hero-img-border-width) var(--hero-img-border-color);
+    border: var(--hero-img-border-width) solid var(--hero-img-border-color);
+    clip-path: inset(0 0 var(--hero-img-border-width) 0);
 }
 
 .hero-img {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
     width: 100%;
     height: 100%;
 
     margin: 0 !important;
-
-    clip-path: inset(
-        calc(var(--hero-img-border-width) + var(--hero-img-margin))
-    );
-
-    border-radius: 50% !important;
+    border-radius: calc(3 * var(--hero-img-border-width)) !important;
 }

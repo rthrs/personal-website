@@ -14,19 +14,18 @@
 }
 
 .social-icons a:hover {
-    color: var(--accent);
-}
-
-.social-icons a:hover .social-icon-caption {
-    border-color: var(--accent);
+    filter: brightness(3);
 }
 
 .social-icons svg {
     stroke-width: 1;
 }
 
-.social-icon-caption {
+.social-icons-title {
     font-size: 0.75rem;
     padding-top: 0.25rem;
-    border-bottom: solid 1px transparent;
+}
+
+.social-icons a:hover .social-icons-title {
+    box-shadow: 0 1px;
 }
