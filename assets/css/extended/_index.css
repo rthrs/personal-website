@@ -8,6 +8,11 @@
         #ff6a3a 45%,
         #3748ff 85%
     );
+    --link-hover-bg: #ffff3a;
+}
+
+:root .dark {
+    --link-hover-bg: #3748ff;
 }
 
 html {
@@ -23,7 +28,8 @@ html {
 }
 
 .accent {
-    font-weight: 600;
+    position: relative;
+    font-weight: 500;
     font-style: italic;
 }
 
@@ -31,9 +37,32 @@ html {
     box-shadow: none;
 }
 
-.accent a:hover {
-    filter: brightness(3);
-    box-shadow: 0 1px;
+.accent:before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: -2px;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+    background: var(--entry);
+}
+
+.accent a:before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: -2px;
+    height: 50%;
+    width: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+    background: var(--link-hover-bg);
+    opacity: 0.8;
+}
+
+.accent a:hover:before {
+    width: 100%;
 }
 
 .hero-img-container {
