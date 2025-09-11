@@ -1,0 +1,14 @@
+{{- with .Page.Resources.Get (.Get "src") }}
+    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+        <div class="hero-img-wrapper-outer">
+            <div class="hero-img-wrapper-inner">
+                <img
+                    class="hero-img"
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="{{ $.Get "alt" }}" />
+            </div>
+        </div>
+    {{ end }}
+{{ end }}

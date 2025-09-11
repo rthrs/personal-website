@@ -8,7 +8,7 @@ description:
 disableAnchoredHeadings: true
 ---
 
-{{< image src="me.png" class="hero-img" alt="Artur Myszkowski" >}}
+{{< hero-img src="me.png" alt="Artur Myszkowski" >}}
 
 {{< socials "contact@arturmyszkowski.pl" >}}
 
