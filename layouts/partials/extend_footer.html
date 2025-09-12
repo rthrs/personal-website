@@ -1,5 +1,15 @@
-{{- with .Page.Scratch.Get "footer_scripts" -}}
-    {{- range . -}}
-        {{- . | safeHTML -}}
-    {{- end -}}
-{{- end -}}
+<script>
+    (function () {
+        const user = "{{ .Site.Params.email.user }}";
+        const domain = "{{ .Site.Params.email.domain }}";
+
+        document.querySelectorAll('a[title="Email"]').forEach((container) => {
+            const email = user + '@' + domain;
+
+            container.href = 'mailto:' + email;
+            if (container.textContent.length === 0) {
+                container.textContent = email;
+            }
+        });
+    })();
+</script>

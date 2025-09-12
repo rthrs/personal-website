@@ -1,13 +1,18 @@
-
 baseURL = "https://arturmyszkowski.pl"
 languageCode = "en-us"
 title = "Artur Myszkowski | Senior Software Developer"
 theme = "PaperMod"
-ignoreLogs = ['warning-goldmark-raw-html']
+ignoreLogs = ["warning-goldmark-raw-html"]
 [markup.goldmark.renderer]
   unsafe= true
 [params]
-  # Override the header text (otherwise the "title" would be used)
+  [params.author]
+    name = "Artur Myszkowski"
+    
+  [params.email]
+    user = "contact"
+    domain = "arturmyszkowski.pl"
+
   [params.label]
     display = true
     text = "Artur Myszkowski"

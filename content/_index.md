@@ -8,29 +8,52 @@ description:
 disableAnchoredHeadings: true
 ---
 
-{{< hero-img src="me.png" alt="Artur Myszkowski" >}}
-
-{{< socials "contact@arturmyszkowski.pl" >}}
+{{< hero src="me.png" email="contact@arturmyszkowski.pl" alt="Artur Myszkowski" size=984 >}}
 
 ### About Me
 
-Hi! I am a {{< accent >}}Senior Software Developer{{< /accent >}} with over
-seven years of experience, holding a Master's degree in Computer Science from
-the University of Warsaw.
+I am a **Senior Software Developer** with over seven years of experience and a
+Master’s degree in Computer Science from the University of Warsaw.
 
-In my previous role, I focused on {{< accent >}} creating modern front-end
-applications{{< /accent >}} with a strong emphasis on high interactivity and
-performance. I believe that an essential skill for a developer is not just
-mastering a single tool, but the ability to efficiently learn and apply the best
-technology for the task at hand.
+I build **modern front-end applications** with a strong emphasis on high
+interactivity and performance. My core philosophy is about leveraging my strong
+academic background in algorithms and data structures to efficiently learn and
+apply the best technology for the task at hand.
 
-### Experience
+For me, the senior role is about more than just technical execution. It's about
+elevating the entire team by fostering a collaborative environment, and
+championing high standards through a culture of continuous learning, knowledge
+sharing, and thoughtful, constructive code review.
 
-You can learn more about my professional experience by downloading my
-{{% accent %}}[Resume](files/Artur_Myszkowski_Resume_2025_v4.pdf){{% /accent %}}.
+### Key Skills
 
-### Contact Me
+I have extensive experience working with a modern web development stack. My
+primary expertise lies in the React ecosystem, but I am a quick learner and
+comfortable with a wide range of tools.
 
-The best way to reach out is via email
-{{% accent %}}{{< email "contact@arturmyszkowski.pl" >}}{{% /accent %}}. I look
-forward to hearing from you!
+- **Core Front-End:** React, Next.js, TypeScript, JavaScript (ES6+), HTML5,
+  CSS3/Sass
+- **Mobile Development:** React Native
+- **State Management:** Redux, Redux Saga, Immer, TanStack Query, RxJS
+- **Styling:** Tailwind CSS, Styled-Components, Chakra-UI
+- **Graphics:** WebGL, Three.js, D3.js
+- **Back-End:** Node.js, Express, Python, Django, Firebase
+- **Databases:** SQL (PostgreSQL, DuckDB) & NoSQL (Firestore, Realtime Database)
+- **DevOps & Tooling:** Git, Webpack, Rollup, Prettier, AWS, Netlify, Hugo
+- **Leadership & Project Management**: Mentoring, Code Review, Agile
+  Methodologies, Client Interaction
+
+---
+
+For a detailed breakdown of my professional roles and accomplishments, please
+see my full resume.
+
+<a href="/files/Artur_Myszkowski_Resume_2025_v4.pdf" class="hero-link" target="_blank" rel="noopener noreferrer">Download
+Resume</a>
+
+### Let's Connect
+
+I'm always open to discussing new projects, creative ideas, or opportunities to
+be part of an ambitious team. The best way to reach me is via email.
+
+<a class="hero-link" target="_blank" rel="noopener noreferrer" title="Email"></a>

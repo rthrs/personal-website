@@ -1,7 +1,15 @@
-{{- $email := .Get 0 -}}
-{{- $parts := split $email "@" -}}
-{{- $user := index $parts 0 -}}
-{{- $domain := index $parts 1 -}}
+{{- $size := $.Get "size" -}}
+{{- with .Page.Resources.Get (.Get "src") }}
+    {{ with .Resize (printf "%dx%d webp" $size $size) }}
+        <img
+            class="hero-img"
+            fetchpriority="high"
+            src="{{ .RelPermalink }}"
+            width="{{ $size }}"
+            height="{{ $size }}"
+            alt="{{ $.Get "alt" }}" />
+    {{ end }}
+{{ end }}
 
 
 <div class="social-icons">
@@ -20,16 +28,3 @@
         </a>
     {{- end }}
 </div>
-
-<script>
-  (function() {
-    const user = '{{ $user }}';
-    const domain = '{{ $domain }}';
-    const container = document.querySelector('.social-icons a[title="Email"]')
-
-    if (container) {
-        const email = user + '@' + domain;
-        container.href = `mailto:${email}`;
-    }
-  })();
-</script>
