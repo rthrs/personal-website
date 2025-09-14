@@ -1,29 +1,15 @@
 :root {
-    --main-width: 1024px;
+    --main-width: 824px;
+    --hero-img-max-size: 342px;
 
-    --border: #0307120d;
-    --accent: #008080;
-    --accent-hover: #006666;
-
-    --hero-img-max-size: 328px;
-    --hero-img-bg: radial-gradient(
-        circle at 35% 120%,
-        #030712 50%,
-        var(--accent) 100%
-    );
+    --border: #e8e8e8;
+    --accent: #0c9487;
 }
 
 .dark {
-    --theme: #030712;
+    --theme: #09090b;
     --border: #ffffff1a;
-    --accent: #009688;
-    --accent-hover: #33a89a;
-
-    --hero-img-bg: radial-gradient(
-        circle at 35% 120%,
-        #030712 50%,
-        var(--accent) 100%
-    );
+    --accent: #0d9488;
 }
 
 html {
@@ -53,14 +39,8 @@ h6 {
     letter-spacing: 1.2px;
     line-height: inherit;
     text-transform: uppercase;
-    font-weight: 450;
-
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: var(--accent);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.35em;
-
+    font-weight: 400;
+    border-bottom: dashed 1px var(--accent);
     color: var(--accent);
 }
 
@@ -68,12 +48,12 @@ a {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-hr {
-    height: 1px !important;
-}
-
 strong {
     font-weight: 600;
+}
+
+.list {
+    background: var(--theme);
 }
 
 .hero-link {
@@ -86,20 +66,24 @@ strong {
     line-height: 36px;
     background-color: var(--accent);
 
-    border-radius: 12px;
-    padding: 6px 18px;
-    transition: background-color 0.2s;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: filter 0.2s ease;
+}
+
+.hero-link svg {
+    height: 26px;
+    width: 26px;
 }
 
 .hero-link:hover,
 .hero-link:focus {
-    background-color: var(--accent-hover);
-    text-decoration: none;
+    filter: brightness(1.15);
 }
 
 .logo a {
     letter-spacing: 3px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .hero-img {
@@ -109,11 +93,10 @@ strong {
     max-width: var(--hero-img-max-size);
     max-height: var(--hero-img-max-size);
 
-    margin: auto !important;
+    margin: 1rem auto !important;
     border-radius: 50% !important;
 
-    background-image: var(--hero-img-bg);
-    box-shadow: 0px 0px 0px 1px var(--border);
+    box-shadow: 0 8px 42px var(--border);
 }
 
 .social-icons {

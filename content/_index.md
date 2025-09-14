@@ -8,7 +8,7 @@ description:
 disableAnchoredHeadings: true
 ---
 
-{{< hero src="me.png" email="contact@arturmyszkowski.pl" alt="Artur Myszkowski" size=984 >}}
+{{< hero src="me.png" email="contact@arturmyszkowski.pl" alt="Artur Myszkowski" size=1024 >}}
 
 ### About Me
 
