@@ -43,13 +43,16 @@ comfortable with a wide range of tools.
 - **Leadership & Project Management**: Mentoring, Code Review, Agile
   Methodologies, Client Interaction
 
----
+<!-- --- -->
+
+### Resume
 
 For a detailed breakdown of my professional roles and accomplishments, please
 see my full resume.
 
-<a href="/files/Artur_Myszkowski_Resume_2025_v4.pdf" class="hero-link" target="_blank" rel="noopener noreferrer">Download
-Resume</a>
+<a  href="/files/Artur_Myszkowski_Resume_2025_v4.pdf" class="hero-link" target="_blank" rel="noopener noreferrer">
+  Download Resume
+</a>
 
 ### Let's Connect
 

@@ -1,58 +1,46 @@
 :root {
-    --body-bg: var(--code-bg);
-    --body-bg-image-opacity: 0.5;
+    --main-width: 1024px;
+
+    --border: #0307120d;
+    --accent: #008080;
+    --accent-hover: #006666;
 
     --hero-img-max-size: 328px;
-
-    --hero-from: darkslategray;
-    --hero-to: #060606;
-
-    --hero-accent: #060606;
+    --hero-img-bg: radial-gradient(
+        circle at 35% 120%,
+        #030712 50%,
+        var(--accent) 100%
+    );
 }
 
 .dark {
-    --body-bg: var(--theme);
-    --body-bg-image-opacity: 0.25;
+    --theme: #030712;
+    --border: #ffffff1a;
+    --accent: #009688;
+    --accent-hover: #33a89a;
 
-    --hero-from: #060606;
-    --hero-to: darkslategray;
-
-    --hero-accent: #f9f9f9;
+    --hero-img-bg: radial-gradient(
+        circle at 35% 120%,
+        #030712 50%,
+        var(--accent) 100%
+    );
 }
 
 html {
     overflow-y: auto;
     -webkit-font-smoothing: antialiased;
+
+    hyphens: auto;
+    text-align: justify;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-
-    background-attachment: fixed;
-    background-image: repeating-linear-gradient(
-        315deg,
-        rgb(from var(--border) r g b / var(--body-bg-image-opacity)) 0px,
-        rgb(from var(--border) r g b / var(--body-bg-image-opacity)) 1px,
-        var(--body-bg) 0px,
-        var(--body-bg) 50%
-    ) !important;
-    background-size: 10px 10px !important;
 }
 
 header {
     border-bottom: dashed 1px var(--border);
-    background: var(--body-bg);
-}
-
-main {
-    background: var(--body-bg);
-}
-
-@media screen and (min-width: 768px) {
-    main {
-        border-inline: dashed 1px var(--border);
-    }
 }
 
 h1,
@@ -65,14 +53,15 @@ h6 {
     letter-spacing: 1.2px;
     line-height: inherit;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 450;
 
     text-decoration: underline;
     text-decoration-style: dashed;
-    text-decoration-color: var(--hero-accent);
+    text-decoration-color: var(--accent);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.35em;
-    color: var(--hero-accent);
+
+    color: var(--accent);
 }
 
 a {
@@ -95,15 +84,17 @@ strong {
 
     color: var(--theme);
     line-height: 36px;
-    background: var(--primary);
-    border-radius: 4px;
-    padding: 4px 12px;
+    background-color: var(--accent);
+
+    border-radius: 12px;
+    padding: 6px 18px;
+    transition: background-color 0.2s;
 }
 
-.hero-link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
+.hero-link:hover,
+.hero-link:focus {
+    background-color: var(--accent-hover);
+    text-decoration: none;
 }
 
 .logo a {
@@ -121,13 +112,8 @@ strong {
     margin: auto !important;
     border-radius: 50% !important;
 
-    background: linear-gradient(
-        10deg,
-        var(--hero-from) 33.3%,
-        var(--hero-to) 100%
-    );
-
-    border: solid 1px var(--border);
+    background-image: var(--hero-img-bg);
+    box-shadow: 0px 0px 0px 1px var(--border);
 }
 
 .social-icons {

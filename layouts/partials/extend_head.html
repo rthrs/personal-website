@@ -22,13 +22,16 @@
     <style>
         @media (prefers-color-scheme: dark) {
             :root {
-                --body-bg: var(--theme);
-                --body-bg-image-opacity: 0.25;
+                --theme: #030712;
+                --border: #ffffff1a;
+                --accent: #009688;
+                --accent-hover: #33a89a;
 
-                --hero-from: #060606;
-                --hero-to: darkslategray;
-
-                --hero-accent: #f9f9f9;
+                --hero-img-bg: radial-gradient(
+                    circle at 35% 120%,
+                    #030712 50%,
+                    var(--accent) 100%
+                );
             }
 
             a[title='Email'] {
