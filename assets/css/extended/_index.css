@@ -39,14 +39,16 @@
 html {
     overflow-y: auto;
     -webkit-font-smoothing: antialiased;
-
-    hyphens: auto;
-    text-align: justify;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+}
+
+main {
+    hyphens: auto;
+    text-align: justify;
 }
 
 header {
