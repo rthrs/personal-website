@@ -1,15 +1,39 @@
 :root {
-    --main-width: 824px;
-    --hero-img-max-size: 342px;
+    --main-width: 820px;
+    --hero-img-max-size: 333px;
 
-    --border: #e8e8e8;
-    --accent: #0c9487;
+    --accent: #39d2cf;
+    --accent-hover: #8efbf7;
+
+    --theme: #ffffff;
+    --border: #e9ebed;
+    --logo: #060b10;
+    --content: #353a3e;
 }
 
 .dark {
-    --theme: #09090b;
-    --border: #ffffff1a;
-    --accent: #0d9488;
+    --theme: #060b10;
+    --border: #272f38;
+    --logo: #ffffff;
+    --content: #b7b5bf;
+}
+
+.list {
+    background: var(--theme) !important;
+}
+
+.logo svg {
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.logo a {
+    letter-spacing: 1px;
+    color: var(--logo);
+}
+
+.logo button {
+    color: var(--logo);
 }
 
 html {
@@ -39,51 +63,44 @@ h6 {
     letter-spacing: 1.2px;
     line-height: inherit;
     text-transform: uppercase;
-    font-weight: 400;
-    border-bottom: dashed 1px var(--accent);
-    color: var(--accent);
+    font-weight: 600;
+    border-bottom: solid 1px var(--border);
+    border-bottom: solid 1px var(--primary);
+    border-bottom: dashed 1px var(--primary);
+    color: var(--logo);
 }
 
 a {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-strong {
-    font-weight: 600;
+li::marker {
+    color: var(--accent);
 }
 
-.list {
-    background: var(--theme);
+strong {
+    font-weight: 600;
 }
 
 .hero-link {
     letter-spacing: 1.5px;
     font-weight: 500;
-    text-transform: uppercase;
     box-shadow: none !important;
 
     color: var(--theme);
+    color: #12181f;
     line-height: 36px;
     background-color: var(--accent);
 
     border-radius: 8px;
     padding: 8px 16px;
-    transition: filter 0.2s ease;
-}
-
-.hero-link svg {
-    height: 26px;
-    width: 26px;
+    transition: 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+    transition-property: background-color;
 }
 
 .hero-link:hover,
 .hero-link:focus {
-    filter: brightness(1.15);
-}
-
-.logo a {
-    letter-spacing: 3px;
-    font-weight: 600;
+    background-color: var(--accent-hover);
 }
 
 .hero-img {
@@ -96,15 +113,13 @@ strong {
     margin: 1rem auto !important;
     border-radius: 50% !important;
 
-    box-shadow: 0 8px 42px var(--border);
+    border: solid 1px var(--border);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     margin: 1.5rem 0;
-    text-transform: uppercase;
-    font-weight: 400;
 }
 
 .social-icons a {
@@ -115,7 +130,8 @@ strong {
     padding: 0 0.5rem;
     border: none;
     color: var(--primary);
-    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .social-icons svg {

@@ -43,8 +43,6 @@ comfortable with a wide range of tools.
 - **Leadership & Project Management**: Mentoring, Code Review, Agile
   Methodologies, Client Interaction
 
-<!-- --- -->
-
 ### Resume
 
 For a detailed breakdown of my professional roles and accomplishments, please
@@ -54,7 +52,7 @@ see my full resume.
   Download Resume
 </a>
 
-### Let's Connect
+### Let's Connect!
 
 I'm always open to discussing new projects, creative ideas, or opportunities to
 be part of an ambitious team. The best way to reach me is via email.
